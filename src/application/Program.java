@@ -1,5 +1,6 @@
 package application;
 
+import boardgame.BoardException;
 import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
@@ -39,6 +40,9 @@ public class Program {
                 }
 
             } catch(ChessException | InputMismatchException e ) {
+                System.out.println(e.getMessage());
+                sc.nextLine();
+            } catch (BoardException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
             }
